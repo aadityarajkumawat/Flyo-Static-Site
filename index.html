@@ -7,7 +7,564 @@
     <title>Flyo | The file Manager</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* ########## NAVBAR ######### */
+
+
+#navbar {
+    font-family: 'Raleway';
+}
+
+.nav-items {
+    float: right;
+    display: inline-flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-items li {
+    margin: auto 35px auto 35px;
+}
+
+.nav-container {
+    padding-top: 40px;
+}
+
+.logo {
+    margin-left: 3%;
+}
+
+/* ######## MAIN LANDING PAGE ######### */
+
+#main-1 {
+    margin-top: 7%;
+    font-family: 'Raleway';
+}
+
+.landing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.landing-left {
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 41px;
+}
+
+.landing h1 {
+    font-size: 40px;
+}
+
+.landing p {
+    font-family: 'Open Sans';
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+/* ######### FORM ########### */
+
+.get-email input {
+    width: 60%;
+    height: 35px;
+    margin-right: 30px;
+    border-radius: 4px;
+    border: none;
+    border: 1px solid rgb(182, 182, 182);
+    font-size: 14px;
+    font-family: 'Raleway';
+}
+
+.get-email button {
+    border: none;
+    background-color: rgb(0, 76, 255);
+    color: white;
+    height: 38px;
+    width: 30%;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Raleway';
+    box-shadow: 1px 1px 8px rgb(177, 177, 177);
+    cursor: pointer;
+}
+
+.landing-right img {
+    margin-left: 20px;
+}
+
+.illustration-curve img {
+    margin-top: 9%;
+    width: 100%;
+}
+
+.main-2-content {
+    background-color: hsl(240, 75%, 98%);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    z-index: 2;
+    top: -5px;
+    padding-bottom: 7%;
+}
+
+.main-2-left {
+    margin-top: 9%;
+    grid-column: 1/8;
+    margin-left: 5%;
+}
+
+.main-2-left h1 {
+    font-family: 'Raleway';
+    font-size: 40px;
+    color: rgb(49, 49, 49)
+}
+
+.main-2-left p {
+    font-family: 'Open Sans';
+    color: rgb(75, 75, 75);
+}
+
+.main-2-left a {
+    border-bottom: 1px solid rgb(0, 177, 94);
+    text-decoration: none;
+    color: rgb(0, 177, 94);
+}
+
+.para-tags {
+    width: 80%;
+}
+
+.testimonial {
+    box-shadow: 1px 1px 6px 4px rgb(221, 221, 221);
+    background-color: white;
+    margin-top: 6%;
+    width: 45%;
+    padding: 3% 3%;
+    border-radius: 7px;
+    color: black;
+}
+
+.testimonial h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.testimonial p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 2;
+}
+
+.testimonial-say {
+    font-size: 0.9rem;
+}
+
+.customer-img {
+    border-radius: 100%;
+    width: 26%;
+}
+
+.customer-info {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    margin-top: 20px;
+}
+
+.combime {
+    position: relative;
+    right: 53%;
+    top: 11%;
+}
+
+.combime h3 {
+    font-size: 0.8rem;
+}
+
+.combime p {
+    font-size: 0.7rem;
+}
+
+.main-2-right {
+    grid-column: 8/12;
+}
+
+.main-2-right img {
+    margin-right: 10px;
+    margin-top: 25%;
+    width: 120%;
+    height: auto;
+}
+
+.cta-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: hsl(238, 22%, 44%);
+    color: white;
+    padding: 5% 2%;
+    font-family: 'Raleway';
+}
+
+.cta-left {
+    grid-column: 1 / 6;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.cta-left h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+
+.cta-left p {
+    font-family: 18px;
+    line-height: 2;
+    margin: 0;
+    margin-top: 4%;
+}
+
+.cta-right {
+    grid-column: 7/11;
+}
+
+.cta-right input {
+    width: 125%;
+    height: 35px;
+    margin-right: 30px;
+    margin-left: 8%;
+    border-radius: 4px;
+    border: none;
+    border: 1px solid rgb(182, 182, 182);
+    box-shadow: 1px 1px 8px rgb(47, 47, 47);
+    font-size: 14px;
+    font-family: 'Raleway';
+}
+
+.cta-right button {
+    border: none;
+    background-color: rgb(0, 76, 255);
+    color: white;
+    height: 38px;
+    width: 50%;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Raleway';
+    box-shadow: 1px 1px 8px rgb(47, 47, 47);
+    cursor: pointer;
+    margin-top: 2.5%;
+    margin-left: 8%;
+}
+
+.cta-right form {
+    margin: 7%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    font-family: 'Raleway';
+    color: white;
+    padding: 5% 4%;
+    background-color: hsl(243, 87%, 12%);
+}
+
+.section1 {
+    grid-column: 1/5;
+}
+
+.first-cta {
+    padding-top: 4.5%;
+}
+
+.section-footer {
+    margin-top: 88%;
+}
+
+.section4 {
+    grid-column: 10/11;
+}
+
+.cta2 {
+    grid-column: 8/9;
+}
+
+
+/* IMAGES */
+
+.img1 {
+    width: 90%;
+    height: auto;
+}
+
+
+/* ICONS */
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 88%;
+}
+
+/* TAB VIEW */
+
+@media (max-width: 1142px) {
+    .landing-left h1 {
+        font-size: 32px;
+    }
+
+    .landing-left p {
+        font-size: 16px;
+    }
+
+    .main-2-left h1 {
+        font-size: 32px;
+    }
+
+    .main-2-right img {
+        margin-top: 50%;
+    }
+
+    .para1 {
+        font-size: 15px;
+    }
+
+    .testimonial p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .testimonial {
+        width: 68%;
+    }
+
+    .cta-left h2 {
+        font-size: 29px;
+    }
+
+    .cta-left p {
+        font-size: 14px;
+    }
+
+    .cta-right button {
+        width: 60%;
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 770px) {
+    .logo {
+        width: 21%;
+        height: auto;
+        margin-left: 2%;
+    }
+
+    .nav-items {
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .nav-items li {
+        margin: auto 13px;
+    }
+
+    .landing {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .landing-left p {
+        padding: 3%;
+    }
+
+    .landing-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .landing-right img {
+        margin-top: 15%;
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .landing-left {
+        margin: auto;
+        margin-left: 10%;
+        margin-top: 41px;
+        order: 2;
+    }
+
+    .landing-left {
+        grid-column: 1/-1;
+        text-align: center;
+        font-size: 37px;
+        margin-top: 2%;
+    }
+
+
+    .get-email {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 40px);
+    }
+
+    .get-email input {
+        margin: auto;
+        width: 80%;
+    }
+
+    .get-email button {
+        margin: auto;
+        margin-top: 2%;
+        width: 80%;
+    }
+
+    .landing-left {
+        margin-left: 0;
+    }
+
+    #main-2 {
+        margin-top: 12%;
+    }
+
+    .main-2-content {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 42% 48%;
+        padding-bottom: 0;
+    }
+
+    .main-2-left {
+        grid-column: 1/-1;
+        order: 2;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .main-2-left h1 {
+        font-size: 21px;
+    }
+
+    .main-2-left a {
+        font-size: 15px;
+    }
+
+    .main-2-right {
+        grid-column: 1/-1;
+        text-align: center;
+    }
+
+    .main-2-right img {
+        margin-right: 0;
+        margin-top: 20%;
+        margin-bottom: 24%;
+        width: 89%;
+        max-width: 545px;
+    }
+
+    .para-tags {
+        width: 100%;
+    }
+
+    .para1 {
+        font-size: 12px;
+    }
+
+    .testimonial-card {
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cta-container {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 200px 110px;
+    }
+
+    .cta-left {
+        grid-column: 1/-1;
+        margin-left: 0;
+    }
+
+    .cta-right {
+        grid-column: 1/-1;
+    }
+
+    .cta-right input {
+        width: 85%;
+    }
+
+    .cta-right button {
+        width: 85%;
+        margin-left: 0;
+    }
+
+    .cta-right form {
+        margin-top: -3%;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 200px);
+    }
+
+    .section1,
+    .section-footer,
+    .section-footer .cta2,
+    .section4 {
+        grid-column: 1/-1;
+    }
+
+    .section-footer {
+        margin-top: 0;
+    }
+
+    .testimonial-card {
+        text-align: left;
+    }
+
+    .icons {
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    .icons>div {
+        margin: auto 12px;
+    }
+}
+    </style>
 </head>
 
 <body>
